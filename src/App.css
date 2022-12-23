@@ -7,6 +7,24 @@
   pointer-events: none;
 }
 
+@font-face {
+  font-family: 'mainFont';
+  src: url('../public/fonts/lemonmilk/LEMONMILK-Regular.otf');
+}
+
+@font-face {
+  font-family: 'lightFont';
+  src: url('../public/fonts/lemonmilk/LEMONMILK-Light.otf');
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: mainFont;
+}
+
+p {
+  font-family: 'lightFont'
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
