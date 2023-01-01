@@ -1,0 +1,10 @@
+.popupInner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapboxgl-popup {
+    min-width: 25vw;
+}

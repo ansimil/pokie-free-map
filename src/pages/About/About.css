@@ -1,0 +1,52 @@
+.aboutContainer {
+    /* background-color: lightblue; */
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutInnerDiv {
+    width: 65%;
+    height: 80%;
+    background-color: white;
+    border: solid black 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aboutInnerDiv > h1 {
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 3rem;
+    
+}
+
+p, h2 {
+    /* text-align: center; */
+    
+    padding-left: 7%;
+    padding-right: 7%;
+    font-weight: 700;
+}
+
+.aboutInnerDiv > h2 {
+    color: rgb(94, 194, 227);
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 5% 5% 1% 5%;
+}
+
+.aboutInnerDiv > h1 {
+    margin-left: 7%;
+    margin-right: 7%;
+    font-weight: 700;
+}
+
+.questionsText {
+    border: solid black 2px;
+}

@@ -1,3 +1,83 @@
 .navbarContainer {
-    min-height: 70px;
+    min-height: 50px;
+    max-height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid black 2px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,1);
+}
+
+.navbarInner {
+    width: 50%
+}
+
+.navbarList {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a, li {
+    list-style: none;
+    text-decoration: none;
+    color: black
+}
+
+.freeText {
+    color: rgb(94, 194, 227);
+    /* color: #0c9d00; */
+}
+
+.pubsText {
+    color: lightblue;
+    /* color: #60965b; */
+}
+
+.navbarList > li > a > h3::before {
+    border-bottom: solid black 4px;
+}
+
+.navbarList > li > a::before {
+    transition: 300ms;
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: black;
+  }
+
+.navbarList > li > a::before {
+    width: 0%;
+    bottom: 0px;
+    top: 10px
+}
+
+.navbarList > li > a:hover::before {
+    width: 15%;
+}
+
+.navbarList > .active > a::before {
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: rgb(94, 194, 227);
+    bottom: 0px;
+    top: 10px;
+    width: 15%
+}
+
+.navbarList {
+    position: relative;
+    right: 5%
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.title > a {
+    position: relative;
+    left: 10%
 }
