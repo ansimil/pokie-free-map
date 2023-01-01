@@ -1,0 +1,21 @@
+.contactContainer {
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactForm {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.suggestionInput {
+    width: 400px;
+    height: 400px;
+}

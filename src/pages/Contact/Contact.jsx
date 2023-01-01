@@ -1,23 +1,29 @@
-import React from 'react'
+import {useRef} from 'react'
 import { useForm } from 'react-hook-form'
-import reCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 import './Contact.css'
 
 const Contact = () => {
   const { register, handleSubmit, reset } = useForm()
+  const captchaRef = useRef(null)
 
   return (
-    <div>
+    <div className='contactContainer'>
       <form 
+      className='contactForm'
       onSubmit={handleSubmit((data) => {
         console.log(data)
         reset()
         })}
       >
-      <input 
-      {...register('suggestion', {minLength: 5})}/>
-      <reCAPTCHA
-        sitekey={"6LcxjMEjAAAAALRHFEu9rwzZx7pn7aqNx2KBpjSD"}
+      <label>Suggestion</label>
+      <textarea 
+      {...register('suggestion', {minLength: 5})}
+      className="suggestionInput"  
+      />
+      <ReCAPTCHA
+        sitekey={process.env.REACT_APP_RECAPTCHA_SITE}
+        ref={captchaRef}
       />
       <input 
         type="submit"
