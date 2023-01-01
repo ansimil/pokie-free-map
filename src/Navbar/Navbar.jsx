@@ -15,9 +15,9 @@ const Navbar = ({location}) => {
       </div>
       <nav className='navbarInner'>
         <ul className='navbarList'>
-          <li className={homeNav}>{<Link to={"."}><h3>Map</h3></Link>}</li>
-          <li className={aboutNav}>{<Link to={"about"}><h3>About</h3></Link>}</li>
-          <li className={contactNav}>{<Link to={"contact"}><h3>Contact</h3></Link>}</li>
+          <li className={homeNav}>{<Link to={"."}><h5>Map</h5></Link>}</li>
+          <li className={aboutNav}>{<Link to={"about"}><h5>About</h5></Link>}</li>
+          <li className={contactNav}>{<Link to={"contact"}><h5>Contact</h5></Link>}</li>
         </ul>
         </nav>
     </div>

@@ -27,11 +27,13 @@ a, li {
 }
 
 .freeText {
-    color: rgb(94, 194, 227)
+    color: rgb(94, 194, 227);
+    /* color: #0c9d00; */
 }
 
 .pubsText {
-    color: lightblue
+    color: lightblue;
+    /* color: #60965b; */
 }
 
 .navbarList > li > a > h3::before {
