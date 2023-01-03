@@ -4,49 +4,67 @@
     min-height: calc(100vh - 50px);
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
 }
 
 .aboutInnerDiv {
-    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    border-bottom: solid black 1px;
+}
+
+.aboutInnerDivLeft {
     height: 80%;
     background-color: white;
-    border: solid black 5px;
+    /* border: solid black 5px; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.aboutInnerDiv > h1 {
+.aboutInnerDivLeft > h1 {
     margin-top: 5%;
     margin-bottom: 0;
     font-size: 3rem;
     
 }
 
-p, h2 {
-    /* text-align: center; */
-    
+p, h2 {    
     padding-left: 7%;
     padding-right: 7%;
     font-weight: 700;
 }
 
-.aboutInnerDiv > h2 {
+.aboutInnerDivLeft > h2 {
     color: rgb(94, 194, 227);
     margin-left: 7%;
     margin-right: 7%;
     padding: 5% 5% 1% 5%;
+    text-align: center;
 }
 
-.aboutInnerDiv > h1 {
-    margin-left: 7%;
-    margin-right: 7%;
+.aboutContainer > h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     font-weight: 700;
+    font-size: 3rem;
 }
 
 .questionsText {
     border: solid black 2px;
+}
+
+.aboutInnerDivRight {
+    min-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }

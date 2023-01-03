@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .contactForm {
@@ -16,6 +18,33 @@
 }
 
 .suggestionInput {
-    width: 400px;
-    height: 400px;
+    width: 50vw;
+    height: 30vh;
+    margin-bottom: 20px
+}
+
+.suggestionSubmitBtn {
+    font-size: 1rem;
+    background-color: white;
+    border: black solid 2px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5%;
+}
+
+.suggestionSubmitBtn:hover {
+    background-color: lightblue;
+}
+
+.knowOfPubs, .email {
+    color: rgb(94, 194, 227)
+}
+
+.red {
+    color: red
+}
+
+.green {
+    color: rgb(78, 219, 78)
 }

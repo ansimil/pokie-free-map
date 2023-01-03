@@ -6,8 +6,6 @@ const Navbar = ({location}) => {
   const aboutNav = location.pathname === '/about' ? "active" : "inactive"
   const contactNav = location.pathname === '/contact' ? "active" : "inactive"
 
-
-  console.log(homeNav)
   return (
     <div className="navbarContainer">
       <div className="title">
