@@ -18,6 +18,7 @@ const PopupComp = ({popupDetails}) => {
     <br />
     {popupDetails.state}, {popupDetails.postcode}
     </p>
+    <p>Date last verified: {popupDetails.dateVerified}</p>
     <a href={popupDetails.websiteLink}>{popupDetails.websiteLink}</a>
     </div>
     

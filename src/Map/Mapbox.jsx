@@ -20,7 +20,7 @@ const Mapbox = () => {
       latitude: -33.865143,
       zoom: 10
     }}
-    style={{width: '100vw', height: '100vh'}}
+    style={{width: '100vw', height: '91vh'}}
     mapStyle="mapbox://styles/mapbox/streets-v11"
     mapboxAccessToken={secret}
   >

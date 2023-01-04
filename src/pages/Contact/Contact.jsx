@@ -20,14 +20,14 @@ const Contact = () => {
     }
     const token = captchaRef.current.getValue();
     captchaRef.current.reset();
-    await axios.post(`${process.env.REACT_APP_API_URL}/validatecaptcha`, {token})
+    await axios.post(`${process.env.REACT_APP_API_URL}/validatecaptcha`, {token, watchSuggestion})
         .then(() =>  {
           reset()
           setIsError(false)
           setMessage('Thank you! Suggestion successfully submitted')
         })
         .catch((err) => {
-          if (err.response.data==='Nocaptcha'){
+          if (err.response?.data==='Nocaptcha'){
             setIsError(true);
             setMessage('Please complete the Captcha')
           }
@@ -40,17 +40,17 @@ const Contact = () => {
 
   return (
     <div className='contactContainer'>
-    <h1><span className='knowOfPubs'>Know of any pubs with pokies?</span> Send us an email or fill out the suggestion form below</h1>
-    <h2><span className="email">email:</span> pokiefreepubsandclubs [at] gmail [dot] com</h2>
+    <h2><span className='knowOfPubs'>Know of any pubs with pokies?</span> Send us an email or fill out the suggestion form below</h2>
+    <h3><span className="email">email:</span> pokiefreepubsandclubs [at] gmail [dot] com</h3>
       <form 
       className='contactForm'
       onSubmit={handleSubmit}
       >
-        <h2><label>Suggestion</label></h2>
+        <label><p>Suggestion</p></label>
         {message && <p className={isError ? 'red' : 'green'}>{message}</p>}
         <textarea 
           className="suggestionInput" 
-          placeholder={`Let us know of any pubs that don't have pokies`}
+          placeholder={`Let us know of any pubs/clubs/bars that don't have pokies`}
           {...register('suggestion')}
         />
         <ReCAPTCHA
