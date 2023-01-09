@@ -6,10 +6,10 @@ const About = () => {
         <h1><span>POKIE</span><span className='freeText'>FREE</span><span className='pubsText'>PUBS</span></h1>
         <div className='aboutInnerDiv'>
           <div className='aboutInnerDivLeft'>
-            <h2 className="questionsText">Want to enjoy your ice cold Froth Whitlam without the annoying bleeps and bloops coming from the "VIP" section of your local?
+            <h2 className="questionsText">Want to find a place for a quiet drink without the temptation of gambling your hard earned money away?
             <br/>
             <br/>
-            Want to find a place for a quiet drink without the temptation of gambling your hard earned money away?
+            Want to enjoy your ice cold Froth Whitlam without the annoying bleeps and bloops coming from the "VIP" section of your local?
             <br/>
             <br/>
             </h2>
@@ -21,7 +21,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <p>Having trouble stepping away? Get help below</p>
+        <p>Having trouble stepping away? Get help <a style={{color: "lightblue"}} href="https://www.gamblinghelponline.org.au/">here</a></p>
     </div>
   )
 }

@@ -40,8 +40,7 @@ const Contact = () => {
 
   return (
     <div className='contactContainer'>
-    <h2><span className='knowOfPubs'>Know of any pubs with pokies?</span> Send us an email or fill out the suggestion form below</h2>
-    <h3><span className="email">email:</span> pokiefreepubsandclubs [at] gmail [dot] com</h3>
+    <h2><span className='knowOfPubs'>Know of any pubs without pokies?</span> Simply fill out the suggestion form below</h2>
       <form 
       className='contactForm'
       onSubmit={handleSubmit}

@@ -1,0 +1,62 @@
+.submitContainer {
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formContainer {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10vw;
+    border: solid black 1px;
+    padding-bottom: 5vh
+}
+
+.submitForm {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submitForm > input, label {
+    width: 30vw
+}
+
+.submitPubBtn {
+    font-size: 1rem;
+    background-color: white;
+    border: black solid 2px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: lightFont;
+}
+
+.submitPubBtn:hover {
+    background-color: lightblue;
+}
+
+.inputError {
+    margin-top: 0;
+    font-size: 0.7rem;
+    color: red
+}
+
+.red {
+    color: red
+}
+
+.green {
+    color: rgb(78, 219, 78)
+}
+
