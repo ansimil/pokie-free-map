@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react'
 import { useState} from 'react'
 import { useForm } from 'react-hook-form'
@@ -16,7 +17,7 @@ const SubmitPub = () => {
             setMessage('Pub successfully submitted')
             setIsError(false)
         })
-        .catch((err) => {
+        .catch(() => {
             setMessage('Something went wrong, please try again')
             setIsError(true)
         })

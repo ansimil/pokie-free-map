@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef */
 import { useState, useEffect } from 'react'
 import './Mapbox.css'
 import Map, {NavigationControl} from 'react-map-gl'
@@ -18,6 +20,7 @@ const Mapbox = () => {
       setPubs(pubs.data)
     })
     .catch(err => console.log(err))
+  // eslint-disable-next-line
   }, [])
 
   if (!pubs) {
