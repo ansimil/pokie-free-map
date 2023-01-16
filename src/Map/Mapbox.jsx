@@ -37,6 +37,12 @@ const Mapbox = () => {
     style={{width: '100vw', height: '91vh'}}
     mapStyle="mapbox://styles/mapbox/streets-v11"
     mapboxAccessToken={secret}
+    onClick={(e) => {
+      e.originalEvent.stopPropagation()
+      if (popupDetails) {
+        setPopupDetails(null)
+      }
+    }} 
   >
 
   <NavigationControl position='bottom-right' />
@@ -47,7 +53,7 @@ const Mapbox = () => {
     key={pub._id}
     pub={pub}
     setPopupDetails={setPopupDetails}
-    popupDetails={popupDetails}  
+    popupDetails={popupDetails} 
     />
     )
   })}
