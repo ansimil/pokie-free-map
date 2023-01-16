@@ -5,11 +5,8 @@ import MarkerComp from '../Marker/MarkerComp'
 import PopupComp from '../Popup/PopupComp'
 import Loading from '../Loading/Loading'
 import axios from 'axios'
-import {v4 as uuid } from 'uuid'
-
 
 const Mapbox = () => {
-  const uniqueId = uuid()
   const [popupDetails, setPopupDetails] = useState(null);
   const [pubs, setPubs] = useState()
 
@@ -47,7 +44,7 @@ const Mapbox = () => {
   {pubs.map((pub) => {
     return (
     <MarkerComp
-    key={uniqueId}
+    key={pub._id}
     pub={pub}
     setPopupDetails={setPopupDetails}
     popupDetails={popupDetails}  
