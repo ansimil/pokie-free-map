@@ -15,6 +15,7 @@ const Mapbox = () => {
   const secret = process.env.REACT_APP_MAPBOX_SECRET
 
   useEffect (() => {
+    console.log(process.env.REACT_APP_API_URL)
     axios.get(`${process.env.REACT_APP_API_URL}/pubs`)
     .then(pubs => {
       setPubs(pubs.data)
