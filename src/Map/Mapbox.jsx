@@ -27,8 +27,7 @@ const Mapbox = () => {
   if (!pubs) {
     return (
         <Loading />
-    )
-    
+    )  
   }
 
   return (

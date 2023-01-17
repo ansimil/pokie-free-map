@@ -1,11 +1,13 @@
 import { useRef, useState} from 'react'
 import { useForm } from 'react-hook-form'
 import ReCAPTCHA from "react-google-recaptcha";
+import Loading from '../../Loading/Loading';
 import axios from 'axios'
 import './Contact.css'
 
 const Contact = () => {
   const [isError, setIsError] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
   const { register, reset, watch } = useForm()
   const captchaRef = useRef(null)
@@ -20,22 +22,32 @@ const Contact = () => {
     }
     const token = captchaRef.current.getValue();
     captchaRef.current.reset();
+    setIsLoading(true)
     await axios.post(`${process.env.REACT_APP_API_URL}/validatecaptcha`, {token, watchSuggestion})
         .then(() =>  {
+          setIsLoading(false)
           reset()
           setIsError(false)
           setMessage('Thank you! Suggestion successfully submitted')
         })
         .catch((err) => {
           if (err.response?.data==='Nocaptcha'){
+            setIsLoading(false)
             setIsError(true);
             setMessage('Please complete the Captcha')
           }
           else {
+            setIsLoading(false)
             setIsError(true);
             setMessage('Something went wrong, please try again')
           }
         })
+}
+
+if (isLoading) {
+  return (
+    <Loading />
+  )
 }
 
   return (
