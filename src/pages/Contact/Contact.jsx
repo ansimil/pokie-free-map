@@ -5,7 +5,7 @@ import Loading from '../../Loading/Loading';
 import axios from 'axios'
 import './Contact.css'
 
-const Contact = () => {
+const Contact = ({setHamburgerOpen}) => {
   const [isError, setIsError] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
@@ -51,7 +51,12 @@ if (isLoading) {
 }
 
   return (
-    <div className='contactContainer'>
+    <div
+    className='contactContainer'
+    onClick={()=>{
+      setHamburgerOpen(false)
+    }}
+    >
     <h2><span className='knowOfPubs'>Know of any pubs without pokies?</span> Simply fill out the suggestion form below</h2>
       <form 
       className='contactForm'

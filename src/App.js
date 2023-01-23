@@ -32,8 +32,8 @@ function App() {
   <Routes>
 
   <Route path="/" element={<Mapbox pubs={data} isLoading={isLoading} setHamburgerOpen={setHamburgerOpen}/>}></Route>
-  <Route path="/about" element={<About/>}></Route>
-  <Route path="/contact" element={<Contact/>}></Route>
+  <Route path="/about" element={<About setHamburgerOpen={setHamburgerOpen}/>}></Route>
+  <Route path="/contact" element={<Contact setHamburgerOpen={setHamburgerOpen}/>}></Route>
   <Route path="/submitpub" element={<SubmitPub/>}></Route>
 
   </Routes>
