@@ -1,8 +1,13 @@
 import './About.css'
 
-const About = () => {
+const About = ({setHamburgerOpen}) => {
   return (
-    <div className="aboutContainer">
+    <div 
+    className="aboutContainer"
+    onClick={()=>{
+      setHamburgerOpen(false)
+    }}
+    >
         <h1><span>POKIE</span><span className='freeText'>FREE</span><span className='pubsText'>PUBS</span></h1>
         <div className='aboutInnerDiv'>
           <div className='aboutInnerDivLeft'>
