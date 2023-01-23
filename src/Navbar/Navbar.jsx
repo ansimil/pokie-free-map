@@ -8,8 +8,8 @@ import hamburgerHover from '../assets/hamburger-hover-icon.png'
 
 
 
-const Navbar = ({ location }) => {
-  const [hamburgerOpen, setHamburgerOpen] = useState(false)
+const Navbar = ({ location, setHamburgerOpen, hamburgerOpen }) => {
+  
   const [hover, setHover] = useState(false)
 
   return (
