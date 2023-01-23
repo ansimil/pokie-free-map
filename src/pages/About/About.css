@@ -69,3 +69,12 @@ p, h2 {
     flex-direction: column;
     text-align: center;
 }
+
+@media screen and (width <= 450px) {
+    .aboutContainer h1 {
+        font-size: 2rem;
+    }
+    .aboutInnerDiv {
+        flex-direction: column;
+    }
+}

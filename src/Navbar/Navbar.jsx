@@ -32,12 +32,10 @@ const Navbar = ({ location }) => {
         onClick={()=>{setHamburgerOpen(!hamburgerOpen)}}
         onMouseEnter={(e)=> {
         setHover(true)
-        console.log(e)
-        }} 
+        }}
         onMouseLeave={(e)=> {
         setHover(false)
-        console.log(e)
-        }} 
+        }}
         src={hover ? hamburgerHover : hamburgerIcon} 
         alt="menu" />
       </div>
