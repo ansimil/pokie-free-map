@@ -54,3 +54,9 @@
 .green {
     color: rgb(78, 219, 78)
 }
+
+@media screen and (width <= 450px) {
+    .suggestionInput {
+        width: 80vw;
+    }
+}
