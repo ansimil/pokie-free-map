@@ -2,12 +2,12 @@
 /* eslint-disable no-undef */
 import { useState } from 'react'
 import './Mapbox.css'
-import Map, {NavigationControl} from 'react-map-gl'
+import Map, { NavigationControl } from 'react-map-gl'
 import MarkerComp from '../Marker/MarkerComp'
 import PopupComp from '../Popup/PopupComp'
 import Loading from '../Loading/Loading'
 
-const Mapbox = ({pubs, isLoading}) => {
+const Mapbox = ({pubs, isLoading, setHamburgerOpen }) => {
   const [popupDetails, setPopupDetails] = useState(null);
   const secret = process.env.REACT_APP_MAPBOX_SECRET
 
@@ -29,10 +29,11 @@ const Mapbox = ({pubs, isLoading}) => {
     mapboxAccessToken={secret}
     onClick={(e) => {
       e.originalEvent.stopPropagation()
+      setHamburgerOpen(false)
       if (popupDetails) {
         setPopupDetails(null)
       }
-    }} 
+    }}
   >
 
   <NavigationControl position='bottom-right' />
