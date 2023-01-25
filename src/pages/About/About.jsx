@@ -22,7 +22,7 @@ const About = ({setHamburgerOpen}) => {
           <div className='aboutInnerDivRight'>
             <h3>Our goal:</h3>
             <p>
-            Australians have a gambling problem and we want to show people the pubs and clubs they can go to without the need for a slap on the pokies. <br/><br/>We want to highlights the establishments in Australia that don't rely on its patrons losing their hard earned money hard to survive. <br/> <br/>Publicans see pokies as intrinsic to the survival of their pubs - we need to support our pokie-less pubs and show that it's possible to survive without them. 
+            Australians have a gambling problem and we want to show people the pubs and clubs they can go to without the need for a slap on the pokies. <br/><br/>We want to highlights the establishments in Australia that don't rely on its patrons losing their hard earned money to survive. <br/> <br/>Publicans see pokies as intrinsic to the survival of their pubs - we need to support our pokie-less pubs and show that it's possible to survive without them. 
             </p>
           </div>
         </div>
